@@ -1,0 +1,16 @@
+{
+  "name": "@alexghr/news",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b packages/server packages/ui",
+    "clean": "tsc -b --clean packages/server packages/ui",
+    "start": "node packages/server"
+  },
+  "repository": "git@github.com:alexghr/bbc-api.git",
+  "author": "Alex Gherghisan <alexghr@users.noreply.github.com>",
+  "license": "UNLICENSED"
+}

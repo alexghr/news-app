@@ -1,0 +1,22 @@
+{
+  "name": "@alexghr/news-server",
+  "version": "1.0.0",
+  "repository": "git@github.com:alexghr/bbc-api.git",
+  "author": "Alex Gherghisan <alexghr@users.noreply.github.com>",
+  "license": "UNLICENSED",
+  "main": "./out/bin/start-server.js",
+  "scripts": {
+    "build": "tsc -b ."
+  },
+  "dependencies": {
+    "@alexghr/news-ui": "*",
+    "koa": "^2.11.0",
+    "koa-static": "^5.0.0",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@alexghr/ts": "^0.1.0",
+    "@types/koa": "^2.11.0",
+    "@types/koa-static": "^4.0.1"
+  }
+}

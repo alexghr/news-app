@@ -1,0 +1,15 @@
+{
+  "extends": "@alexghr/ts",
+  "compilerOptions": {
+    "outDir": "../../out/lib",
+    "jsx": "react"
+  },
+  "include": [
+    "*"
+  ],
+  "references": [
+    {
+      "path": "../app"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@alexghr/news-ui",
+  "version": "1.0.0",
+  "repository": "git@github.com:alexghr/bbc-api.git",
+  "author": "Alex Gherghisan <alexghr@users.noreply.github.com>",
+  "license": "UNLICENSED",
+  "main": "./out/lib",
+  "scripts": {
+    "build:ts": "tsc -b .",
+    "build:bundle": "webpack",
+    "build": "$npm_execpath run build:ts && $npm_execpath run build:bundle"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@alexghr/ts": "^0.1.0",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/webpack": "^4.41.2",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
