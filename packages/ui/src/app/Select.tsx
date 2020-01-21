@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 type Props = {
   options: ReadonlyArray<{ value: string, label: string }>,
-  selected: string;
+  selected?: string;
   onChange: (value: string) => void;
 }
 

@@ -1,22 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 import Select from './Select';
-import { countries } from './countries';
+import useCountries from './hooks/useCountries';
 
 const Element = styled.div`
   background-color: red;
 `;
 
 const App: React.FC = () => {
-  const [country, selectCountry] = React.useState(countries[0].value);
+  const { data: countries } = useCountries();
+  const [country, setCountry] = React.useState<string | undefined>(undefined);
+  const countrySelectItems = countries ? countries.map(({ id, name }) => ({ value: id, label: name })) : [];
 
   React.useEffect(() => {
-    console.log('selected country %s', country);
-  }, [country]);
+    // set initial country after they get loaded
+    if (countries) {
+      setCountry(countries[0].id);
+    }
+  }, [countries]);
 
   return (
     <Element>
-      <Select options={countries} selected={country} onChange={selectCountry} />
+      <Select options={countrySelectItems} selected={country} onChange={setCountry} />
     </Element>
   );
 }
