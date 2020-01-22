@@ -2,12 +2,14 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../../out/bin",
+    "rootDir": "./",
+    "skipLibCheck": true,
     "types": [
       "node"
     ]
   },
   "include": [
-    "*"
+    "./*"
   ],
   "references": [
     {

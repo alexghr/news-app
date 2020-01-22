@@ -1,0 +1,12 @@
+{
+  "extends": "@alexghr/ts",
+  "compilerOptions": {
+    "outDir": "./out",
+    "rootDir": "./src",
+    "types": []
+  },
+  "include": [
+    "./src/*"
+  ],
+  "exclude": []
+}

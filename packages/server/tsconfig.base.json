@@ -1,8 +1,14 @@
 {
   "extends": "@alexghr/ts",
+  "compilerOptions": {
+    "composite": true,
+  },
   "references": [
     {
       "path": "../app"
+    },
+    {
+      "path": "../common"
     }
   ]
 }

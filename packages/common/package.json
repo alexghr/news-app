@@ -1,0 +1,13 @@
+{
+  "name": "@alexghr/news-common",
+  "version": "1.0.0",
+  "main": "./out",
+  "scripts": {
+    "build": "tsc -b .",
+    "clean": "tsc -b --clean .",
+    "postclean": "rm -rf ./out"
+  },
+  "devDependencies": {
+    "@alexghr/ts": "^0.1.0"
+  }
+}
