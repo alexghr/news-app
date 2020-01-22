@@ -4,9 +4,6 @@ import Select from './Select';
 import useCountries from '../hooks/useCountries';
 import { SelectedCountryContext } from '../context/SelectedCountryContext';
 
-const Element = styled.div`
-`;
-
 const CountrySelect: React.FC = () => {
   const { data: countries } = useCountries();
   const { country, setCountry } = React.useContext(SelectedCountryContext);
@@ -21,9 +18,15 @@ const CountrySelect: React.FC = () => {
 
   return (
     <Element>
-      <Select options={countrySelectItems} selected={country} onChange={setCountry} />
+      Country: <Select options={countrySelectItems} selected={country} onChange={setCountry} />
     </Element>
   );
-}
+};
 
 export default CountrySelect;
+
+const Element = styled.div`
+  background-color: #ddbbaa;
+  font-size: 1.5rem;
+  padding: 16px 8px ;
+`;

@@ -19,6 +19,8 @@ const TopHeadlines: React.FC = () => {
 
 export default TopHeadlines;
 
-const Element = styled.div``;
+const Element = styled.div`
+  padding: 16px 0;
+`;
 
 const Article = styled.div``;

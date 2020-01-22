@@ -4,10 +4,6 @@ import { SelectedCountryProvider } from './context/SelectedCountryContext';
 import CountrySelect from './components/CountrySelector';
 import TopHeadlines from './components/TopHeadlines';
 
-const Element = styled.div`
-  background-color: red;
-`;
-
 const App: React.FC = () => {
   return (
     <Element>
@@ -20,3 +16,8 @@ const App: React.FC = () => {
 }
 
 export default App;
+
+const Element = styled.div`
+  max-width: 64rem;
+  margin: auto;
+`;
