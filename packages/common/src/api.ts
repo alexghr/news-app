@@ -1,12 +1,14 @@
 import { Article, Country } from './models';
 
-export type ApiResponse<T, E = never> = {
+export type ApiResponseOk<T> = {
   status: 'success',
   data: T
-} | (E extends never ? never : {
+};
+
+export type ApiResponseError<E> = {
   status: 'error',
   error: E
-});
+};
 
-export type GetCountriesApiResponse = ApiResponse<ReadonlyArray<Country>>;
-export type GetHeadlinesApiResponse = ApiResponse<ReadonlyArray<Article>, 'bad_parameter' | 'upstream_error'>;
+export type GetCountriesApiResponse = ApiResponseOk<ReadonlyArray<Country>>;
+export type GetHeadlinesApiResponse = ApiResponseOk<ReadonlyArray<Article>> | ApiResponseError<'bad_parameter' | 'upstream_error'>;

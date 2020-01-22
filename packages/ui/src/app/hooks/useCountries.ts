@@ -1,23 +1,6 @@
-import React from 'react';
+import useFetch from './useFetch';
+import { GetCountriesApiResponse } from '@alexghr/news-common';
 
-type State = {
-  data: ReadonlyArray<{ id: string, name: string }>;
-  loading: false;
-} | { data: undefined, loading: true };
-
-export default function useCountries(): State {
-  const [state, setState] = React.useState<State>({
-    data: undefined,
-    loading: true
-  });
-
-  React.useEffect(() => {
-    fetch('/api/v1/countries')
-      .then(r => r.json())
-      .then(data => {
-        setState({ data, loading: false });
-      });
-  }, []);
-
-  return state;
+export default function useCountries() {
+  return useFetch<GetCountriesApiResponse>('/api/v1/countries');
 }

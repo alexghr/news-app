@@ -8,9 +8,12 @@
   "scripts": {
     "build:ts": "tsc -b .",
     "build:bundle": "webpack",
-    "build": "$npm_execpath run build:ts && $npm_execpath run build:bundle"
+    "build": "$npm_execpath run build:ts && $npm_execpath run build:bundle",
+    "clean": "tsc -b --clean .",
+    "postclean": "rm -rf ./out"
   },
   "dependencies": {
+    "@alexghr/news-common": "*",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "tslib": "^1.10.0",
