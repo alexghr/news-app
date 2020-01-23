@@ -6,7 +6,7 @@ import { SelectedCountryContext } from '../context/SelectedCountryContext';
 
 const CountrySelect: React.FC = () => {
   const { data: countries } = useCountries();
-  const { country, setCountry } = React.useContext(SelectedCountryContext);
+  const { country, selectCountry } = React.useContext(SelectedCountryContext);
   const countrySelectItems = countries ? countries.map(({ id, name }) => ({ value: id, label: name })) : [];
 
   React.useEffect(() => {
@@ -18,7 +18,7 @@ const CountrySelect: React.FC = () => {
 
   return (
     <Element>
-      Country: <Select options={countrySelectItems} selected={country} onChange={setCountry} />
+      Country: <Select options={countrySelectItems} selected={country} onChange={selectCountry} />
     </Element>
   );
 };
