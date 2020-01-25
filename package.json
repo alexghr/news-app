@@ -9,7 +9,9 @@
     "build": "lerna run build",
     "clean": "lerna run clean",
     "prestart": "$npm_execpath run build",
-    "start": "node -r dotenv/config packages/server"
+    "start": "node -r dotenv/config packages/server",
+    "docker:build": "docker build --pull --quiet --rm --tag news:latest .",
+    "docker:run": "docker run -p 8080:8080 --env-file .env news:latest"
   },
   "dependencies": {
     "dotenv": "^8.2.0"

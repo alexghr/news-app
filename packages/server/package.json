@@ -5,6 +5,9 @@
   "author": "Alex Gherghisan <alexghr@users.noreply.github.com>",
   "license": "UNLICENSED",
   "main": "./out/bin/start-server.js",
+  "bin": {
+    "start-server": "out/bin/start-server.js"
+  },
   "scripts": {
     "build": "tsc -b .",
     "clean": "tsc -b --clean .",
